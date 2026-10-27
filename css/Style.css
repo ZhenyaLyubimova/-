@@ -1,5 +1,5 @@
 * {
-    box-sizing: border-box;
+    box-sizing: border-box; 
 }
 
 body {
@@ -20,6 +20,41 @@ footer {
     padding: 0;
 }
 
+/* верхняя полоска*/
+.top-line {
+    height: 50px; 
+    padding: 0 20px;
+    font-size: 12px;
+    border-bottom: 1px solid #eeeeee;
+    background-color: #ffffff;
+    color: #333333;
+    display: flex; 
+    align-items: center; 
+    justify-content: space-between; 
+}
+
+.top-line span {
+    flex: 1; 
+}
+
+.top-line button {
+    background-color: #f6a000; 
+    color: #ffffff;
+    border: none;
+    padding: 10px 25px;
+    border-radius: 25px;
+    font-size: 12px;
+    font-weight: bold;
+    cursor: pointer;
+    text-transform: uppercase;
+    white-space: nowrap; 
+}
+
+.top-line button:hover {
+    background-color: #e59400;
+}
+
+/* шапка с навигацией */
 .header-main {
     height: 45px;
     padding: 12px 25px;
@@ -44,42 +79,10 @@ nav a {
 }
 
 nav a:hover {
-    color: #f6a000;
+    color: #f6a000; 
 }
 
-.top-line {
-    height: 50px; 
-    padding: 0 20px;
-    font-size: 12px;
-    border-bottom: 1px solid #eeeeee;
-    background-color: #ffffff;
-    color: #333333;
-    display: flex; 
-    align-items: center; 
-    justify-content: space-between; 
-}
-
-.top-line span {
-    flex: 1; 
-}
-
-.top-line button {
-    background-color: #f6a000;
-    color: #ffffff;
-    border: none;
-    padding: 10px 25px;
-    border-radius: 25px;
-    font-size: 12px;
-    font-weight: bold;
-    cursor: pointer;
-    text-transform: uppercase;
-    white-space: nowrap; 
-}
-
-.top-line button:hover {
-    background-color: #e59400;
-}
-
+/* главный экран */
 .hero {
     height: 600px; 
     padding-top: 150px;
@@ -122,12 +125,12 @@ nav a:hover {
     border-radius: 15px;
 }
 
+/* преимущества */
 .advantages {
     padding: 35px 30px 20px;
     text-align: left;
 }
 
-/* ИСПРАВЛЕНО: увеличен размер заголовков */
 h2 {
     font-size: 24px;
     font-weight: normal;
@@ -155,6 +158,7 @@ h2 {
     clear: both;
 }
 
+/* о нас */
 .about {
     padding: 20px 35px;
 }
@@ -172,9 +176,10 @@ h2 {
     margin-bottom: 12px;
 }
 
+/* подписка*/
 .subscribe {
     padding: 22px 30px;
-    background-color: #f6a000;
+    background-color: #f6a000; 
     color: #ffffff;
 }
 
@@ -200,6 +205,7 @@ h2 {
     color: #333333;
 }
 
+/* особенности гироскутеров */
 .features {
     padding: 25px 35px;
 }
@@ -210,17 +216,16 @@ h2 {
     line-height: 1.2;
 }
 
-/* ИСПРАВЛЕНО: добавлен отступ сверху */
 .features > p {
     line-height: 1.4;
     margin-top: 30px;
     font-size: 15px;
 }
 
+/* каталог товаров */
 .catalog {
     padding: 40px 30px;
-    background-color: #fafafa;
-    /* ИСПРАВЛЕНО: убран max-width, чтобы каталог был на всю ширину */
+    background-color: #fafafa; 
 }
 
 .catalog-header {
@@ -257,15 +262,15 @@ h2 {
 
 .products-grid {
     display: flex;
-    flex-wrap: nowrap;
+    flex-wrap: wrap;
     gap: 20px;
     width: 100%;
 }
 
-/* ИСПРАВЛЕНО: добавлен position: relative для бейджа */
 .product {
     position: relative;
     flex: 1;
+    min-width: 220px; 
     min-height: 280px;
     padding: 20px;
     background-color: #ffffff;
@@ -279,7 +284,7 @@ h2 {
     background-color: #f6a000;
     color: #ffffff;
     padding: 8px 15px;
-    border-radius: 0 10px 10px 0; /* скругление только справа */
+    border-radius: 0 10px 10px 0;
     font-size: 12px;
     font-weight: bold;
 }
@@ -289,7 +294,7 @@ h2 {
     height: 180px;
     object-fit: contain;
     margin-bottom: 15px;
-    margin-top: 35px; 
+    margin-top: 35px;
 }
 
 .product p {
@@ -305,100 +310,369 @@ h2 {
     margin-top: 10px;
 }
 
+/* консультанты */
 .consultants {
-    padding: 35px 60px;
+    padding: 50px 40px;
+    background-color: #ffffff;
+}
+
+.consultants h2 {
+    font-size: 36px;
+    font-weight: normal;
+    margin-bottom: 40px;
+    color: #222222;
+}
+
+.consultants-grid {
+    display: flex;
+    gap: 40px;
+    flex-wrap: wrap; 
 }
 
 .consultant {
-    float: left;
-    width: 31%;
-    margin-right: 3.5%;
-}
-
-.consultant:last-child {
-    margin-right: 0;
+    flex: 1;
+    min-width: 280px; 
+    display: flex;
+    align-items: flex-start;
+    gap: 20px;
 }
 
 .consultant img {
-    float: left;
-    width: 85px;
-    height: 90px;
-    margin-right: 12px;
+    width: 150px;
+    height: 180px;
     object-fit: cover;
+    border-radius: 5px;
+    flex-shrink: 0;
+}
+
+.consultant-info {
+    flex: 1;
 }
 
 .consultant h3 {
-    margin: 8px 0 5px;
-    font-size: 13px;
+    margin: 0 0 10px;
+    font-size: 24px;
+    font-weight: bold;
+    color: #222222;
+    line-height: 1.2;
 }
 
 .consultant p {
-    font-size: 10px;
+    font-size: 14px;
+    color: #333333;
+    margin-bottom: 15px;
 }
 
+.consultant button {
+    background-color: #f6a000;
+    color: #ffffff;
+    border: none;
+    padding: 8px 20px;
+    border-radius: 20px;
+    font-size: 13px;
+    cursor: pointer;
+}
+
+.consultant button:hover {
+    background-color: #e59400;
+}
+
+/* бренды */
 .brands {
-    padding: 28px;
-    text-align: center;
+    padding: 50px 40px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
     color: #999999;
-    word-spacing: 20px;
-    border-top: 1px solid #eeeeee;
+    font-size: 22px;
+    letter-spacing: 2px;
+    flex-wrap: wrap; 
+    gap: 20px;
 }
 
+.brands span {
+    flex: 1;
+    text-align: center;
+    min-width: 100px; 
+}
+
+/*полезная информация*/
 .articles {
-    padding: 30px;
+    padding: 50px 40px;
+    background-color: #ffffff;
+}
+
+.articles h2 {
+    font-size: 36px;
+    font-weight: normal;
+    margin-bottom: 40px;
+    color: #222222;
+}
+
+.articles-grid {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
 }
 
 .article {
-    float: left;
-    width: 23%;
-    margin-right: 2.66%;
+    flex: 1;
+    min-width: 250px; 
     position: relative;
-}
-
-.article:last-child {
-    margin-right: 0;
+    overflow: hidden;
+    border-radius: 5px;
 }
 
 .article img {
     width: 100%;
-    height: 130px;
+    height: 280px;
     object-fit: cover;
+    display: block;
+}
+
+.article::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.4);
+    z-index: 1;
 }
 
 .article p {
     position: absolute;
-    left: 8px;
-    bottom: 5px;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 80%;
     color: #ffffff;
-    font-size: 10px;
+    font-size: 16px;
     font-weight: bold;
+    line-height: 1.4;
+    z-index: 2;
+    margin: 0;
+    text-align: center;
 }
 
-/* ИСПРАВЛЕНО: убрано дублирование footer */
+/* подвал */
 footer {
     width: 100%;
     max-width: 1200px;
     margin: 0 auto;
-    padding: 30px;
-    background-color: #f5f5f5;
-    color: #777777;
-    line-height: 1.7;
-    font-size: 10px;
+    padding: 40px 60px;
+    background-color: #ffffff;
+    color: #999999;
+    line-height: 1.6;
+    font-size: 14px;
+    display: flex;
+    gap: 40px;
+    flex-wrap: wrap; 
 }
 
 footer > div {
-    float: left;
-    width: 25%;
-    padding-right: 20px;
+    flex: 1;
+    min-width: 200px; 
+    box-sizing: border-box;
+}
+
+footer > div:first-child {
+    flex: 2;
 }
 
 footer b {
-    color: #333333;
-    font-size: 11px;
+    color: #222222;
+    font-size: 14px;
+    font-weight: bold;
+    display: block;
+    margin-bottom: 15px;
+    text-transform: uppercase;
 }
 
 footer p {
-    clear: both;
+    margin: 5px 0;
+    color: #999999;
+}
+
+footer a {
+    color: #999999;
+    text-decoration: none;
+}
+
+footer a:hover {
+    color: #f6a000;
+}
+
+footer .copyright {
+    margin-top: 20px;
     padding-top: 20px;
-    margin: 0;
+    border-top: 1px solid #eeeeee;
+}
+
+/* ===== АДАПТИВНОСТЬ ===== */
+
+@media (max-width: 1024px) {
+    .hero {
+        height: 450px;
+    }
+    
+    .hero h1 {
+        font-size: 36px;
+    }
+    
+    .hero p {
+        width: 90%;
+        font-size: 16px;
+    }
+    
+    .advantage {
+        width: 50%; /* 2 в ряд */
+        margin-bottom: 20px;
+    }
+    
+    .feature-column {
+        width: 50%;
+    }
+    
+    .brands span {
+        min-width: 80px;
+        font-size: 18px;
+    }
+}
+
+@media (max-width: 768px) {
+    .header-main {
+        height: auto;
+        padding: 10px 15px;
+        display: flex;
+        flex-wrap: wrap;
+        align-items: center;
+        justify-content: space-between;
+    }
+    
+    .header-main b {
+        float: none;
+        font-size: 18px;
+    }
+    
+    nav {
+        float: none;
+        display: flex;
+        flex-wrap: wrap;
+        gap: 10px;
+        margin-top: 10px;
+    }
+    
+    nav a {
+        margin-left: 0;
+        font-size: 11px;
+    }
+    
+    .hero {
+        height: 350px;
+    }
+    
+    .hero h1 {
+        font-size: 28px;
+    }
+    
+    .hero p {
+        font-size: 14px;
+        width: 95%;
+    }
+    
+    .advantage {
+        width: 50%;
+    }
+    
+    .feature-column {
+        width: 100%;
+        margin-bottom: 15px;
+    }
+    
+    .subscribe {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+    
+    .subscribe b {
+        width: 100%;
+        margin-bottom: 15px;
+        font-size: 14px;
+    }
+    
+    .subscribe input {
+        width: 100%;
+        margin-right: 0;
+        margin-bottom: 10px;
+    }
+    
+    .consultant {
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+    }
+    
+    .consultant-info {
+        text-align: center;
+    }
+    
+    footer {
+        padding: 30px 20px;
+    }
+    
+    footer > div {
+        width: 50%;
+        flex: none;
+    }
+    
+    footer > div:first-child {
+        width: 100%;
+    }
+}
+
+@media (max-width: 480px) {
+    .top-line {
+        flex-direction: column;
+        height: auto;
+        padding: 10px;
+        text-align: center;
+        gap: 10px;
+    }
+    
+    .top-line button {
+        width: 100%;
+    }
+    
+    .advantage {
+        width: 100%;
+    }
+    
+    .product {
+        min-width: 100%;
+    }
+    
+    .article {
+        min-width: 100%;
+    }
+    
+    .consultant {
+        min-width: 100%;
+    }
+    
+    .brands {
+        justify-content: center;
+    }
+    
+    .brands span {
+        min-width: auto;
+        width: auto;
+        flex: none;
+        margin: 5px 10px;
+    }
+    
+    footer > div {
+        width: 100%;
+    }
 }
