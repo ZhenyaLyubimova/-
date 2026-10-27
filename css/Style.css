@@ -14,10 +14,10 @@ header,
 main,
 footer {
     border: 0;
-    background-color: #f6a000;
-    color: #ffffff;
-    font-size: 9px;
-    padding: 3px 15px;
+    background-color: #ffffff;
+    color: #333333;
+    font-size: 14px;
+    padding: 0;
 }
 
 .header-main {
@@ -54,48 +54,78 @@ footer {
 }
 
 .top-line {
-    height: 28px;
-    padding: 6px 20px;
-    font-size: 10px;
+    height: 50px; 
+    padding: 0 20px;
+    font-size: 12px;
     border-bottom: 1px solid #eeeeee;
+    background-color: #ffffff;
+    color: #333333;
+    display: flex; 
+    align-items: center; 
+    justify-content: space-between; 
+}
+
+.top-line span {
+    flex: 1; 
 }
 
 .top-line button {
-    float: right;
+    background-color: #f6a000;
+    color: #ffffff;
+    border: none;
+    padding: 10px 25px;
+    border-radius: 25px;
+    font-size: 12px;
+    font-weight: bold;
+    cursor: pointer;
+    text-transform: uppercase;
+    white-space: nowrap; 
+}
+
+.top-line button:hover {
+    background-color: #e59400;
 }
 
 .hero {
-    height: 245px;
-    padding-top: 65px;
+    height: 600px; 
+    padding-top: 150px;
     text-align: center;
     color: #ffffff;
     background-image: linear-gradient(
         rgba(0, 0, 0, 0.5),
         rgba(0, 0, 0, 0.5)
-    ), url("../images/hero.jpg");
+    ), url("../img/scooter-3620869_960_720.jpg");
     background-size: cover;
     background-position: center;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
 }
 
 .hero h1 {
-    margin: 0 0 15px;
-    font-size: 28px;
+    margin: 0 0 20px;
+    font-size: 48px; 
     font-weight: normal;
 }
 
 .hero p {
-    width: 550px;
-    margin: 0 auto 20px;
-    font-size: 12px;
+    width: 700px; 
+    margin: 0 auto 30px;
+    font-size: 18px; 
+        line-height: 1.5;
 }
 
 .button {
     display: inline-block;
-    padding: 8px 25px;
+    padding: 15px 40px; 
     background-color: #ffffff;
     color: #333333;
     text-decoration: none;
-    font-size: 11px;
+    font-size: 16px; 
+    border: none;
+    cursor: pointer;
+    border-radius: 15px;
 }
 
 .advantages {
